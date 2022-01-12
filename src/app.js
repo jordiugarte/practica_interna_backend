@@ -1,5 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 const app = express();
 
 const materia_routes = require('./routes/materia.routes');
@@ -18,6 +19,7 @@ app.use((req, res, next) => {
     res.header('Allow', 'GET, POST, OPTIONS, PUT, DELETE');
     next();
 });
+app.use(cors());
 
 app.use('/materias', materia_routes);
 app.use('/docentes', docente_routes);
