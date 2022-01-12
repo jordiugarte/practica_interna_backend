@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const app = require('./app');
-const port = 7875;
+const port = 7900;
 
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost:27017/docfollow', {
