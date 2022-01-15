@@ -159,7 +159,7 @@ const controller = {
         let anio = req.params.anio;
         let semestre = req.params.semestre;
         let s = new Date(anio + (semestre === '1'? '-01-01' : '-08-01'));
-        let e = new Date((semestre === '1'? anio + '-07-31' : (parseInt(anio) + 1) + '-12-31'));
+        let e = new Date((semestre === '1'? anio + '-07-31' : anio + '-12-31'));
 
         MateriaController.find({
             $and: [
@@ -174,7 +174,7 @@ const controller = {
         let anio = req.params.anio;
         let semestre = req.params.semestre;
         let s = new Date(anio + (semestre === '1'? '-01-01' : '-08-01'));
-        let e = new Date((semestre === '1'? anio + '-07-31' : (parseInt(anio) + 1) + '-12-31'));
+        let e = new Date((semestre === '1'? anio + '-07-31' : anio + '-12-31'));
         MateriaController.find({
             $and: [
                 { inicio: { $gte: s} },
