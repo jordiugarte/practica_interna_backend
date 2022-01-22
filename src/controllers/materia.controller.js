@@ -91,7 +91,7 @@ const controller = {
                 Object.values(materiasExcel).forEach(materia => {
                     //let dataToAssing = (materia.codigo in materiasBD)? JSON.stringify(materiasBD[materia.codigo]) : {};
                     let datos = ['silabo_subido', 'aula_revisada', 'examen_revisado', 'contrato_impreso', 'contrato_firmado',
-                        'planilla_lista', 'planilla_firmada', 'cheque_solicitado', 'cheque_recibido', 'cheque_entregado', 'horas_planta'];
+                        'planilla_lista', 'planilla_firmada', 'pago_realizado', 'horas_planta'];
                     if (materia.codigo in materiasBD) {
                         datos.forEach(dato => {
                             materia[dato] = materiasBD[materia.codigo][dato]

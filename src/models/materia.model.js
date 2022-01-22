@@ -55,15 +55,7 @@ const MateriaSchema = Schema({
         type: Boolean,
         default: false
     },
-    cheque_solicitado: {
-        type: Boolean,
-        default: false
-    },
-    cheque_recibido: {
-        type: Boolean,
-        default: false
-    },
-    cheque_entregado: {
+    pago_realizado: {
         type: Boolean,
         default: false
     },

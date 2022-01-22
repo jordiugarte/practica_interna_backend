@@ -40,24 +40,10 @@ let roles = {
   ],
   contabilidad: [
     {
-      nombre: "cheque_solicitado",
+      nombre: "pago_realizado",
       type: "dependency",
-      dependency: "planilla_firmada",
-      horas_contrato: true,
-      message: "El cheque no ha sido solicitado"
-    },
-    {
-      nombre: "cheque_recibido",
-      type: "dependency",
-      dependency: "cheque_solicitado",
-      message: "El cheque no ha sido recibido"
-    },
-    {
-      nombre: "cheque_entregado",
-      type: "dependency",
-      dependency: "cheque_recibido",
-      horas_contrato: true,
-      message: "El cheque no ha sido entregado"
+      dependency: "pago_realizado",
+      message: "El pago no ha sido realizado"
     }
   ],
   registros: [
