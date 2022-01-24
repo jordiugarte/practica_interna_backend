@@ -5,8 +5,8 @@ const port = 7900;
 
 mongoose.Promise = global.Promise;
 
-/*Servidor*///mongoose.connect('mongodb://jugarte18:j0rd12022@localhost:27017/jugarte18', {
-/*Local*/mongoose.connect('mongodb://localhost:27017/jugarte18', {
+mongoose.connect('mongodb://jugarte18:j0rd12022@localhost:27017/jugarte18', {
+//mongoose.connect('mongodb://localhost:27017/jugarte18', {
     useNewUrlParser: true,
     useUnifiedTopology: true
     })
