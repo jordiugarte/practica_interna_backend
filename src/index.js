@@ -9,9 +9,7 @@ mongoose.connect('mongodb://jugarte18:j0rd12022@localhost:27017/jugarte18', {
 //mongoose.connect('mongodb://localhost:27017/jugarte18', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    server: {
-        ssl: true
-    }
+    ssl: true
     })
     .then(() => {
         console.log("Conexion a la base de datos establecida con exito");
