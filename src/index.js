@@ -5,11 +5,12 @@ const port = 7900;
 
 mongoose.Promise = global.Promise;
 
-mongoose.connect('mongodb://jugarte18:j0rd12022@localhost:27017/jugarte18', {
+mongoose.connect('mongodb://jugarte18:j0rd12022@localhost:27017/jugarte18?ssl=true', {
 //mongoose.connect('mongodb://localhost:27017/jugarte18', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     sslValidate: true,
+    checkServerIdentity:false
     })
     .then(() => {
         console.log("Conexion a la base de datos establecida con exito");
