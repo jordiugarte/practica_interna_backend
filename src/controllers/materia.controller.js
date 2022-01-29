@@ -38,10 +38,11 @@ const controller = {
     },
 
     createMateriasExcel: function (req, res) {
-        req.body.forEach(function (item) {
+        /*req.body.forEach(function (item) {
             let materia = new MateriaController(Object.assign(item));
             materia.save();
-        });
+        });*/
+        console.log(req);
     },
 
     getMateria: function (req, res) {
