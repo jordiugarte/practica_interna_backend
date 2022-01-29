@@ -38,7 +38,10 @@ const controller = {
     },
 
     createMateriasExcel: async function (req, res) {
-        console.log(req.body);
+        let materia = new MateriaController(Object.assign(req.body));
+        actualizarHoras(req, res, materia.id_docente, materia, true, () => {
+            materia.save(default_response(req, res));
+        });
     },
 
     getMateria: function(req, res){
