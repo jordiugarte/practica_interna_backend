@@ -19,7 +19,7 @@ app.use((req, res, next) => {
     res.header('Allow', 'GET, POST, OPTIONS, PUT, DELETE');
     next();
 });
-app.use(cors());
+//app.use(cors());
 
 
 app.use('/materias', materia_routes);
