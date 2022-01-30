@@ -20,6 +20,7 @@ app.use((req, res, next) => {
     next();
 });
 app.use(cors());
+app.use("trust proxy", true);
 
 app.use('/materias', materia_routes);
 app.use('/docentes', docente_routes);
