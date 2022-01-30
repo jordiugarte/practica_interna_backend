@@ -1,6 +1,4 @@
 const express = require('express');
-const https = require('https');
-const fs = require('fs');
 const bodyParser = require('body-parser');
 const app = express();
 
@@ -26,7 +24,5 @@ app.use('/docentes', docente_routes);
 app.use('/usuarios', usuario_routes);
 app.use('', extra_routes);
 app.use('/reset', reset_routes);
-
-https.createServer(app).listen(7900);
 
 module.exports = app;
