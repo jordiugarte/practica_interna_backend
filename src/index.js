@@ -10,7 +10,7 @@ mongoose.connect('mongodb://jugarte18:j0rd12022@localhost:27017/jugarte18', {
     useUnifiedTopology: true,
     ssl: true,
     sslValidate: true,
-    sslCA: './key.pem'
+    sslCA: './src/key.pem'
 })
     .then(() => {
         console.log("Conexion a la base de datos establecida con exito");
