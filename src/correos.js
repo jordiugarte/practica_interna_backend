@@ -19,7 +19,7 @@ const correos = {
         }
     },
 
-    recoger_cheque: {
+    pago_realizado: {
         asunto: 'Pago Realizado',
         mensaje: function (materia, inicio, fin)  {
             return `Le informamos que el desembolso monetario a sus servicios de docencia por la materia: ${materia} dictada en fechas ${inicio} a ${fin}
