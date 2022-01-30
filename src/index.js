@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 const app = require('./app');
-
 const port = 7900;
 
 mongoose.Promise = global.Promise;
