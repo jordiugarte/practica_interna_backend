@@ -14,11 +14,11 @@ mongoose.connect('mongodb://jugarte18:j0rd12022@localhost:27017/jugarte18', {
 })
     .then(() => {
         console.log("Conexion a la base de datos establecida con exito");
-        console.log('SSL/TLS Server using self generated certificate');
         https.createServer({
-            cert: fs.readFileSync('ssl.crt'),
-            key: fs.readFileSync('ssl.key')
+            cert: fs.readFileSync('selfsigned.crt'),
+            key: fs.readFileSync('selfsigned.key')
         }, app).listen(port, () => {
+            console.log('SSL/TLS Server using self generated certificate');
             console.log(`Servidor corriendo correctamente en la url: localhost:${port}`);
         });
     })
