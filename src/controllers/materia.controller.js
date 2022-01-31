@@ -6,10 +6,7 @@ const response = utils.response;
 
 var express = require('express');
 var app = express();
-var path = require('path');
-var bodyParser = require('body-parser');
-var MongoClient = require('mongodb').MongoClient
-var db;
+
 
 function actualizarHoras(req, res, docenteId, materia, sumar, callback) {
     if (!docenteId) return callback();
@@ -38,11 +35,22 @@ const controller = {
     },
 
     createMateriasExcel: function (req, res) {
-        /*req.body.forEach(function (item) {
+        let index = 0;
+        var mongoose = require('mongoose');
+        var newID = mongoose.Types.ObjectId();
+        //longitud del arreglo que llega
+        while(req.body[index] != undefined){
+            index ++;
+        }
+        console.log("Se recibieron ", index, " elementos");
+        for(let i = 0; i < index; i++) {
+            newID = mongoose.Types.ObjectId(); 
+            req.body[i]["_id"] = newID;
+        }
+        req.body.forEach(function (item) {
             let materia = new MateriaController(Object.assign(item));
             materia.save();
-        });*/
-        console.log(req);
+        });
     },
 
     getMateria: function (req, res) {
