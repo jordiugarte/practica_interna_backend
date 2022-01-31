@@ -1,6 +1,5 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const cors = require('cors');
 const app = express();
 
 const materia_routes = require('./routes/materia.routes');
@@ -9,8 +8,8 @@ const usuario_routes = require('./routes/usuario.routes');
 const extra_routes = require('./routes/extra.routes');
 const reset_routes = require('./routes/reset.routes');
 
-app.use(bodyParser.urlencoded({limit: '10mb', extended:false}));
-app.use(bodyParser.json({limit: '10mb'}));
+app.use(bodyParser.urlencoded({ limit: '10mb', extended: false }));
+app.use(bodyParser.json({ limit: '10mb' }));
 
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
@@ -19,7 +18,6 @@ app.use((req, res, next) => {
     res.header('Allow', 'GET, POST, OPTIONS, PUT, DELETE');
     next();
 });
-app.use(cors());
 
 app.use('/materias', materia_routes);
 app.use('/docentes', docente_routes);
